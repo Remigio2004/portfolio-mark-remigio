@@ -1,0 +1,509 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Mark Adrian Remigio | BSIT Student and Web Builder</title>
+    <meta
+      name="description"
+      content="Portfolio of Mark Adrian Remigio, a 4th-year BSIT student at Universidad de Manila. Projects, experience, certifications and GitHub activity."
+    />
+    <meta property="og:title" content="Mark Adrian Remigio | BSIT Student and Web Builder" />
+    <meta
+      property="og:description"
+      content="Projects, experience, certifications and GitHub activity from a 4th-year BSIT student at Universidad de Manila."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#1FA34A" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='6' y='22' width='52' height='30' fill='%231FA34A' stroke='%230E1A12' stroke-width='5'/%3E%3Crect x='14' y='10' width='12' height='12' fill='%231FA34A' stroke='%230E1A12' stroke-width='5'/%3E%3Crect x='38' y='10' width='12' height='12' fill='%231FA34A' stroke='%230E1A12' stroke-width='5'/%3E%3C/svg%3E"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=Space+Grotesk:wght@500;700&family=Work+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+
+    <!-- inline SVG symbols -->
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true" focusable="false">
+      <symbol id="shuriken" viewBox="0 0 24 24">
+        <path d="M12 0L15 9L24 12L15 15L12 24L9 15L0 12L9 9Z" fill="currentColor" />
+        <circle cx="12" cy="12" r="2.4" fill="#FAFDF7" />
+      </symbol>
+      <symbol id="brick" viewBox="0 0 64 44">
+        <g fill="currentColor" stroke="#0E1A12" stroke-width="4" stroke-linejoin="round">
+          <rect x="3" y="14" width="58" height="27" />
+          <rect x="12" y="4" width="14" height="10" />
+          <rect x="38" y="4" width="14" height="10" />
+        </g>
+      </symbol>
+      <symbol id="medal" viewBox="0 0 24 24">
+        <g
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <circle cx="12" cy="9" r="6" />
+          <path d="M8.5 14.2L7 22l5-3 5 3-1.5-7.8" />
+        </g>
+      </symbol>
+      <symbol id="github" viewBox="0 0 24 24">
+        <path
+          fill="currentColor"
+          d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.69 1.25 3.35.96.1-.74.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.25.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.08 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"
+        />
+      </symbol>
+      <symbol id="download" viewBox="0 0 24 24">
+        <path
+          d="M12 3v12m0 0l-4.5-4.5M12 15l4.5-4.5M4 21h16"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.6"
+          stroke-linecap="square"
+        />
+      </symbol>
+      <symbol id="close" viewBox="0 0 24 24">
+        <path
+          d="M5 5l14 14M19 5L5 19"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="3"
+          stroke-linecap="square"
+        />
+      </symbol>
+      <symbol id="up" viewBox="0 0 24 24">
+        <path
+          d="M12 20V5m0 0l-6 6m6-6l6 6"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="3"
+          stroke-linecap="square"
+        />
+      </symbol>
+      <symbol id="menu" viewBox="0 0 24 24">
+        <path
+          d="M3 6h18M3 12h18M3 18h18"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="3"
+          stroke-linecap="square"
+        />
+      </symbol>
+      <symbol id="ninja-head" viewBox="0 0 120 130">
+        <rect width="120" height="130" fill="#E4F3E1" />
+        <rect
+          x="20"
+          y="118"
+          width="80"
+          height="20"
+          fill="#0B5B2C"
+          stroke="#0E1A12"
+          stroke-width="4"
+        />
+        <rect
+          x="38"
+          y="94"
+          width="44"
+          height="26"
+          fill="#FFC928"
+          stroke="#0E1A12"
+          stroke-width="4"
+        />
+        <rect
+          x="26"
+          y="26"
+          width="68"
+          height="76"
+          rx="12"
+          fill="#1FA34A"
+          stroke="#0E1A12"
+          stroke-width="4"
+        />
+        <rect
+          x="34"
+          y="50"
+          width="52"
+          height="26"
+          rx="4"
+          fill="#FFC928"
+          stroke="#0E1A12"
+          stroke-width="4"
+        />
+        <circle cx="48" cy="63" r="4.5" fill="#0E1A12" />
+        <circle cx="72" cy="63" r="4.5" fill="#0E1A12" />
+        <rect
+          x="52"
+          y="12"
+          width="16"
+          height="14"
+          fill="#1FA34A"
+          stroke="#0E1A12"
+          stroke-width="4"
+        />
+      </symbol>
+    </svg>
+
+    <!-- =============== NAV =============== -->
+    <header class="nav">
+      <div class="wrap nav-in">
+        <a class="logo" href="#home" aria-label="Mark Remigio, back to top"
+          >MARK REMIGIO<small>.DEV</small></a
+        >
+        <nav aria-label="Primary">
+          <ul class="links" id="links">
+            <li><a href="#home" data-nav="home">Home</a></li>
+            <li><a href="#about" data-nav="about">About Me</a></li>
+            <li><a href="#projects" data-nav="projects">Projects</a></li>
+            <li><a href="#contact" data-nav="contact">Contact</a></li>
+            <li class="only-mobile"><a class="dl-cv" href="cv.pdf" download>Download CV</a></li>
+          </ul>
+        </nav>
+        <div class="nav-right">
+          <a class="btn dl-cv" href="cv.pdf" download
+            ><svg class="ico"><use href="#download" /></svg>Download CV</a
+          >
+          <button
+            class="menu-btn"
+            id="menuBtn"
+            aria-expanded="false"
+            aria-controls="links"
+            aria-label="Open menu"
+          >
+            <svg><use href="#menu" /></svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="track" id="track"></div>
+    </div>
+
+    <main id="main">
+      <!-- =============== HERO =============== -->
+      <section class="hero" id="home" aria-labelledby="hero-name">
+        <div class="hero-grid">
+          <div class="hero-text">
+            <span class="status"><i></i>Status: ready to build</span>
+            <h1 class="name" id="hero-name">Mark Adrian <span>Remigio</span></h1>
+            <div class="card intro studs">
+              <p id="heroIntro"></p>
+              <div class="chips" id="heroChips"></div>
+            </div>
+            <div class="cta-row">
+              <a class="btn dark studs" href="#projects">View projects</a>
+              <a class="btn gold" href="#contact">Say hello</a>
+            </div>
+          </div>
+
+          <div class="stage-col">
+            <div class="stage" id="stage">
+              <div class="swirl" aria-hidden="true">
+                <svg viewBox="0 0 200 200" fill="none" stroke="currentColor">
+                  <circle cx="100" cy="100" r="94" stroke-width="3" stroke-dasharray="26 16 6 16" />
+                  <g class="b">
+                    <circle cx="100" cy="100" r="72" stroke-width="3" stroke-dasharray="40 14" />
+                  </g>
+                  <circle cx="100" cy="100" r="50" stroke-width="3" stroke-dasharray="10 12" />
+                </svg>
+              </div>
+
+              <div class="band" id="band" aria-hidden="true"></div>
+
+              <div class="idcard" id="idcard">
+                <div class="clip"></div>
+                <div class="id-head">
+                  <span>UDM BSIT</span><svg><use href="#shuriken" /></svg>
+                </div>
+                <div class="id-photo" id="idPhoto">
+                  <svg
+                    viewBox="0 0 120 130"
+                    preserveAspectRatio="xMidYMid slice"
+                    role="img"
+                    aria-label="Placeholder ninja avatar"
+                    id="idPlaceholder"
+                  >
+                    <use href="#ninja-head" />
+                  </svg>
+                </div>
+                <div class="id-body">
+                  <div class="id-name">Mark Adrian <span>Remigio</span></div>
+                  <span class="id-role">BSIT Student</span>
+                </div>
+                <div class="id-bar" aria-hidden="true"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="belt" aria-hidden="true"></div>
+
+      <!-- =============== ABOUT =============== -->
+      <section class="section" id="about" aria-labelledby="about-h">
+        <div class="wrap">
+          <div class="sec-head"><h2 class="h-tag" id="about-h">About me</h2></div>
+
+          <div class="about-grid">
+            <div class="card studs about-card" id="aboutCard"></div>
+            <div id="eduWrap"></div>
+          </div>
+
+          <div class="block" id="expBlock">
+            <div class="block-head"><h3 class="h-sub">Experience</h3></div>
+            <div class="grid-1" id="expGrid"></div>
+            <div class="more-row" id="expMore"></div>
+          </div>
+
+          <div class="block" id="orgBlock">
+            <div class="block-head"><h3 class="h-sub">Organizations and Scholarship</h3></div>
+            <div class="grid-2" id="orgGrid"></div>
+            <div class="more-row" id="orgMore"></div>
+          </div>
+
+          <div class="block" id="certBlock">
+            <div class="block-head"><h3 class="h-sub">Licenses and certifications</h3></div>
+            <div class="grid-3" id="certGrid"></div>
+            <div class="more-row" id="certMore"></div>
+          </div>
+
+          <div class="block" id="skillBlock">
+            <div class="block-head">
+              <h3 class="h-sub">Brickbox: skills</h3>
+              <div class="tabs" id="skillTabs" role="group" aria-label="Filter skills"></div>
+            </div>
+            <div class="grid-skills" id="skillGrid"></div>
+            <div class="more-row" id="skillMore"></div>
+          </div>
+
+          <div class="block" id="ghBlock">
+            <div class="block-head">
+              <h3 class="h-sub">GitHub activity</h3>
+              <a
+                class="btn sm gold"
+                id="ghLink"
+                href="https://github.com/Remigio2004"
+                target="_blank"
+                rel="noopener"
+                >View GitHub profile</a
+              >
+            </div>
+            <div class="card studs gh-card">
+              <div class="gh-top">
+                <div class="gh-total" id="ghTotal"></div>
+                <div class="gh-src" id="ghSrc"></div>
+              </div>
+              <div
+                class="cal-scroll"
+                tabindex="0"
+                aria-label="GitHub contribution calendar, scrolls sideways"
+              >
+                <div class="months" id="months" aria-hidden="true"></div>
+                <div
+                  class="cal"
+                  id="cal"
+                  role="img"
+                  aria-label="Contribution calendar for the last year"
+                ></div>
+              </div>
+              <div class="gh-foot">
+                <span class="muted" style="font-size: 13px">Each square is one day.</span>
+                <div class="legend" aria-hidden="true">
+                  Less <i class="lv0"></i><i class="lv1"></i><i class="lv2"></i><i class="lv3"></i
+                  ><i class="lv4"></i> More
+                </div>
+              </div>
+            </div>
+            <div class="gh-stats" id="ghStats"></div>
+          </div>
+        </div>
+      </section>
+
+      <div class="belt" aria-hidden="true" style="margin-top: 72px"></div>
+
+      <!-- =============== PROJECTS =============== -->
+      <section class="section" id="projects" aria-labelledby="proj-h">
+        <div class="wrap">
+          <div class="sec-head">
+            <h2 class="h-tag" id="proj-h">Selected projects</h2>
+            <div class="tabs" id="projTabs" role="group" aria-label="Filter projects"></div>
+          </div>
+          <div class="grid-3" id="projGrid"></div>
+        </div>
+      </section>
+
+      <!-- =============== CONTACT =============== -->
+      <section class="section" id="contact" aria-labelledby="contact-h" style="padding-top: 96px">
+        <div class="wrap">
+          <div class="contact-grid">
+            <div class="contact-copy">
+              <h2 class="h-tag" id="contact-h">Contact</h2>
+              <p class="contact-title" aria-hidden="true">
+                Let's build <span>something together</span>
+              </p>
+              <p class="lead">
+                Have a project, an internship opening, or a question? Send a message here or find me
+                on GitHub and LinkedIn.
+              </p>
+              <div class="socials">
+                <a
+                  class="soc"
+                  id="socGh"
+                  href="https://github.com/Remigio2004"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="GitHub profile"
+                  ><svg><use href="#github" /></svg
+                ></a>
+                <a
+                  class="soc"
+                  id="socLi"
+                  href="https://www.linkedin.com/in/remigio-markadrian/"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="LinkedIn profile"
+                  >in</a
+                >
+              </div>
+            </div>
+
+            <form class="card studs form" id="form" novalidate>
+              <div class="field" data-f="name">
+                <label for="f-name">Your name</label>
+                <input
+                  id="f-name"
+                  name="name"
+                  type="text"
+                  autocomplete="name"
+                  placeholder="e.g. Juan Dela Cruz"
+                />
+                <p class="err">Enter your name (at least 2 characters).</p>
+              </div>
+              <div class="field" data-f="email">
+                <label for="f-email">Your email</label>
+                <input
+                  id="f-email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  placeholder="e.g. juan@example.com"
+                />
+                <p class="err">Enter a valid email address, like name@example.com.</p>
+              </div>
+              <div class="field" data-f="message">
+                <label for="f-msg">Your message</label>
+                <textarea
+                  id="f-msg"
+                  name="message"
+                  placeholder="What would you like to build or discuss?"
+                ></textarea>
+                <p class="err">Write a short message (at least 10 characters).</p>
+              </div>
+              <div class="hp" aria-hidden="true">
+                <label
+                  >Leave this empty<input
+                    type="text"
+                    name="website"
+                    tabindex="-1"
+                    autocomplete="off"
+                /></label>
+              </div>
+              <button class="btn" type="submit" id="send">Send message</button>
+              <p class="status-msg" id="formStatus" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="wrap foot-in">
+        <div>
+          <h2>Ready to build?</h2>
+          <p>4th-year BSIT student turning ideas into working websites and apps.</p>
+          <div class="socials">
+            <a
+              class="soc"
+              id="ftGh"
+              href="https://github.com/Remigio2004"
+              target="_blank"
+              rel="noopener"
+              aria-label="GitHub profile"
+              ><svg><use href="#github" /></svg
+            ></a>
+            <a
+              class="soc"
+              id="ftLi"
+              href="https://www.linkedin.com/in/remigio-markadrian/"
+              target="_blank"
+              rel="noopener"
+              aria-label="LinkedIn profile"
+              >in</a
+            >
+          </div>
+        </div>
+        <div class="foot-meta">
+          <b>&copy; <span id="yr">2026</span> Mark Adrian Remigio</b><br />
+          Built with bricks in Manila, Philippines
+        </div>
+      </div>
+    </footer>
+
+    <button class="top-brick" id="topBtn" aria-label="Back to top">
+      <svg><use href="#up" /></svg>TOP
+    </button>
+
+    <dialog id="modal" aria-labelledby="mTitle">
+      <div class="m-head">
+        <h3 id="mTitle"></h3>
+        <button class="m-close" id="mClose" aria-label="Close details">
+          <svg><use href="#close" /></svg>
+        </button>
+      </div>
+      <div class="m-body" id="mBody"></div>
+    </dialog>
+
+    <dialog id="showcase" class="showcase" aria-labelledby="scTitle">
+      <div class="sc-main">
+        <section class="sc-gallery" aria-label="Photos">
+          <div class="sc-gtop">
+            <span class="sc-count" id="scCount">1 / 3</span>
+            <span class="sc-short" id="scShort"></span>
+          </div>
+          <div class="sc-frame" id="scFrame"></div>
+          <div class="sc-ctrl" id="scCtrl">
+            <button class="sc-btn" type="button" id="scPrev">&larr; Prev</button>
+            <div class="sc-dots" id="scDots"></div>
+            <button class="sc-btn" type="button" id="scNext">Next &rarr;</button>
+          </div>
+        </section>
+        <section class="sc-details" id="scDetails"></section>
+      </div>
+      <footer class="sc-foot">
+        <span>Portfolio showcase // Mark Adrian Remigio</span>
+        <button class="btn sm ghost" type="button" id="scClose">
+          <svg aria-hidden="true"><use href="#close" /></svg>Close
+        </button>
+      </footer>
+    </dialog>
+
+    <dialog id="imgView" class="imgview" aria-label="Image preview">
+      <button class="m-close" id="ivClose" aria-label="Close image">
+        <svg aria-hidden="true"><use href="#close" /></svg>
+      </button>
+      <img id="ivPic" src="" alt="" />
+    </dialog>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
