@@ -10,7 +10,7 @@ const CONFIG = {
   linkedin: "https://www.linkedin.com/in/remigio-markadrian/",
   email: "your.email@example.com", // TODO: put your real email
   formEndpoint: "", // Formspree URL, e.g. "https://formspree.io/f/xxxx". Empty = opens the visitor's email app
-  cvUrl: "cv.pdf",
+  cvUrl: "Remigio_Resume.pdf",
 };
 
 const PROFILE = {
