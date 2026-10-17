@@ -164,6 +164,16 @@ const ORGANIZATIONS = [
 
 const CERTIFICATIONS = [
   {
+    title: "The Next Commit: Transitioning to the IT Workforce",
+    issuer: "Universidad de Manila College of Computing Studies",
+    year: "Oct 2026",
+    credentialId: "",
+    credentialUrl: "",
+    image: "assets/images/UID - 108.jpg",
+    description:
+      "Certificate of Participation for attending 'The Next Commit: Transitioning to the IT Workforce' seminar on October 9, 2026, at the UDM Admin Hall. Covered professional skills and preparation for transitioning into the IT workforce.",
+  },
+  {
     title: "National Certificate II in Computer Systems Servicing",
     issuer: "Technical Education and Skills Development Authority (TESDA)",
     year: "Jun 2023",
