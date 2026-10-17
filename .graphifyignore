@@ -1,0 +1,7 @@
+# Generated graph artifacts and local tooling
+graphify-out/
+.git/
+
+# Media and documents are outside this project's code-only graph
+assets/
+*.pdf
