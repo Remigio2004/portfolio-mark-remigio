@@ -376,6 +376,8 @@ const PROJECTS = [
     liveUrl:
       "https://github.com/Remigio2004/SDLC-Strike/releases/download/v1.0.0/SDLC.Strike.Main.apk",
     repoUrl: "https://github.com/Remigio2004/SDLC-Strike",
+    documentationUrl:
+      "https://docs.google.com/document/d/1K3c_udwU0f2hGqgXdb_MCmyK2fOumTCEavvCTCLdTBQ/edit?tab=t.0",
   },
   {
     title: "Fac-Check — Facility Concern Reporting & Corrective Maintenance Management System",
@@ -1379,7 +1381,7 @@ function openShowcase(kind, it) {
     ${it.solution ? `<div><h4 class="sc-h">Engineered solution</h4><p>${esc(it.solution)}</p></div>` : ""}
     ${it.highlights && it.highlights.length ? `<div><h4 class="sc-h">Key highlights &amp; details</h4><ul class="sc-list">${it.highlights.map((f) => `<li>${esc(f)}</li>`).join("")}</ul></div>` : ""}
     ${it.stack && it.stack.length ? `<div><h4 class="sc-h">Technologies used</h4><div class="m-meta">${it.stack.map((t) => `<span class="tag">${esc(t)}</span>`).join("")}</div></div>` : ""}
-    ${it.liveUrl || it.repoUrl ? `<hr class="sc-rule"><div class="m-links">${it.liveUrl ? `<a class="btn sm ${isApk ? "lime" : ""}" href="${esc(it.liveUrl)}" target="_blank" rel="noopener">${isApk ? "Get APK" : "Live site"}${isApk ? SC_DL : SC_EXT}</a>` : ""}${it.repoUrl ? `<a class="btn sm gold" href="${esc(it.repoUrl)}" target="_blank" rel="noopener">GitHub repo${SC_EXT}</a>` : ""}</div>` : ""}`
+    ${it.liveUrl || it.repoUrl || it.documentationUrl ? `<hr class="sc-rule"><div class="m-links">${it.liveUrl ? `<a class="btn sm ${isApk ? "lime" : ""}" href="${esc(it.liveUrl)}" target="_blank" rel="noopener">${isApk ? "Get APK" : "Live site"}${isApk ? SC_DL : SC_EXT}</a>` : ""}${it.repoUrl ? `<a class="btn sm gold" href="${esc(it.repoUrl)}" target="_blank" rel="noopener">GitHub repo${SC_EXT}</a>` : ""}${it.documentationUrl ? `<a class="btn sm ghost" href="${esc(it.documentationUrl)}" target="_blank" rel="noopener">Docs${SC_EXT}</a>` : ""}</div>` : ""}`
     : `
     <span class="sc-date">${esc(it.start)} – ${esc(it.end)}</span>
     <div>
