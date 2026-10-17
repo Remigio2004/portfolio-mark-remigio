@@ -26,7 +26,7 @@
   --gutter: max(24px, calc((100vw - var(--maxw)) / 2 + 24px));
   --nav-h: 72px;
 
-  --brick-wall: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='96' viewBox='0 0 96 96'%3E%3Crect width='96' height='96' fill='%231FA34A'/%3E%3Cg fill='%2334BE5F' stroke='%230E1A12' stroke-width='2.5'%3E%3Ccircle cx='48' cy='24' r='13'/%3E%3Ccircle cx='0' cy='72' r='13'/%3E%3Ccircle cx='96' cy='72' r='13'/%3E%3C/g%3E%3Cpath d='M0 1.5H96M0 49.5H96M1.5 0V48M49.5 48V96' stroke='%230E1A12' stroke-width='3' fill='none'/%3E%3C/svg%3E");
+  --brick-wall: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='480' height='320' viewBox='0 0 480 320'%3E%3Crect width='480' height='320' fill='%23BED5BD'/%3E%3Cpath d='M0 0H480V160H0Z' fill='%23C9DCC8'/%3E%3Cpath d='M0 0H480M0 160H480M0 0V160M240 160V320' stroke='%23A5C2A5' stroke-width='2' fill='none'/%3E%3Cpath d='M2 3H478M2 163H478' stroke='%23DCE8D5' stroke-width='2'/%3E%3Cpath d='M120 110A30 30 0 0 0 150 80M360 110A30 30 0 0 0 390 80M0 270A30 30 0 0 0 30 240M240 270A30 30 0 0 0 270 240M480 270A30 30 0 0 0 510 240' fill='none' stroke='%239DB69D' stroke-opacity='.55' stroke-width='3'/%3E%3Cg fill='%23D0E1CD' stroke='%23A5C2A5' stroke-width='2'%3E%3Ccircle cx='120' cy='80' r='28'/%3E%3Ccircle cx='360' cy='80' r='28'/%3E%3Ccircle cx='0' cy='240' r='28'/%3E%3Ccircle cx='240' cy='240' r='28'/%3E%3Ccircle cx='480' cy='240' r='28'/%3E%3C/g%3E%3Cpath d='M99 80A21 21 0 0 1 120 59M339 80A21 21 0 0 1 360 59M-21 240A21 21 0 0 1 0 219M219 240A21 21 0 0 1 240 219M459 240A21 21 0 0 1 480 219' fill='none' stroke='%23E7EFDF' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E");
   --shuriken-tile: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='34' height='34' viewBox='0 0 24 24'%3E%3Cpath d='M12 0L15 9L24 12L15 15L12 24L9 15L0 12L9 9Z' fill='%23FFC928' fill-opacity='.85'/%3E%3C/svg%3E");
   --cage-bg: url("../assets/background/craftpix-net-823949-free-nature-backgrounds-pixel-art/nature_1/orig.png");
 
@@ -447,11 +447,24 @@ button {
    ========================================================= */
 .hero {
   position: relative;
+  isolation: isolate;
   overflow: hidden;
   padding-left: var(--gutter);
   background-color: var(--mint);
-  background-image: radial-gradient(circle, #fff 0 8px, #c7ddc2 8px 10px, transparent 10.5px);
-  background-size: 44px 44px;
+  /* A light construction grid adds texture without competing with the content. */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cpath d='M0 0H80M0 0V80' fill='none' stroke='%23CFE2C8' stroke-width='1'/%3E%3Cpath d='M36 40H44M40 36V44' stroke='%23B2CCA9' stroke-width='1'/%3E%3C/svg%3E");
+  background-position: 24px 24px;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  /* Static paper grain sits over the backgrounds, below the text and hanging ID. */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cfilter id='grain' x='0' y='0' width='100%25' height='100%25'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23grain)' opacity='.7'/%3E%3C/svg%3E");
+  opacity: 0.16;
+  mix-blend-mode: multiply;
 }
 .hero-grid {
   display: grid;
@@ -524,37 +537,7 @@ button {
   display: flex;
   flex-direction: column;
   min-height: 620px;
-}
-.stage-col::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  background: var(--brick-wall);
-  background-size: 96px 96px;
-  clip-path: polygon(
-    evenodd,
-    0 0,
-    100% 0,
-    100% 100%,
-    0 100%,
-    0 0,
-    16% 10%,
-    38% 5%,
-    62% 9%,
-    84% 4%,
-    92% 26%,
-    86% 47%,
-    94% 70%,
-    84% 94%,
-    60% 90%,
-    36% 96%,
-    14% 90%,
-    8% 66%,
-    14% 44%,
-    6% 24%,
-    16% 10%
-  );
+  background: #bed5bd var(--brick-wall) center top / clamp(320px, 32vw, 520px) auto;
 }
 .stage {
   position: relative;
@@ -563,32 +546,6 @@ button {
   min-height: 560px;
   touch-action: pan-y;
 }
-.swirl {
-  position: absolute;
-  left: 50%;
-  top: 58%;
-  width: min(420px, 88%);
-  aspect-ratio: 1;
-  transform: translate(-50%, -50%);
-  color: var(--green);
-  opacity: 0.55;
-  pointer-events: none;
-}
-.swirl svg {
-  width: 100%;
-  height: 100%;
-  animation: spin 18s linear infinite;
-}
-.swirl svg .b {
-  animation: spin 11s linear infinite reverse;
-  transform-origin: 50% 50%;
-}
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 .band {
   position: absolute;
   left: 50%;
@@ -1935,9 +1892,7 @@ dialog.showcase {
   html {
     scroll-behavior: auto;
   }
-  .track,
-  .swirl svg,
-  .swirl svg .b {
+  .track {
     animation: none;
   }
   .js .rise {
