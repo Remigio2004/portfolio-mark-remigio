@@ -8,8 +8,8 @@ const CONFIG = {
   photoSrc: "assets/images/me.jpg", // shows on the ID card
   githubUser: "Remigio2004",
   linkedin: "https://www.linkedin.com/in/remigio-markadrian/",
-  email: "your.email@example.com", // TODO: put your real email
-  formEndpoint: "", // Formspree URL, e.g. "https://formspree.io/f/xxxx". Empty = opens the visitor's email app
+  email: "remigiomark42@gmail.com",
+  formEndpoint: "https://formspree.io/f/xeaazqrq",
   cvUrl: "Remigio_Resume.pdf",
 };
 
